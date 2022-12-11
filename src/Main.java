@@ -1,5 +1,4 @@
 import java.sql.SQLOutput;
-
 public class Main {
     public static void main(String[] args) {
         task1();
@@ -9,15 +8,16 @@ public class Main {
     public static void task1() {
         System.out.println("Задание 1");
             int capital = 15000;
+            int bankAccount = 2_459_000;
             int total = 0;
-            int i = 0;
-            while (total <= 2_459_000) {
-                i=i+1;
+            int month = 0;
+            while (total <= bankAccount) {
+                month=month+1;
                 total = total + capital;
-                System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей");
+                System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
         }
         System.out.println(total);
-        System.out.println(i);
+        System.out.println(month);
     }
     public static void task2() {
         System.out.println("Задание 2");
@@ -38,12 +38,11 @@ public class Main {
         int birthRate1000 = 17;
         int mortality1000 = 8;
         int size1000 = birthRate1000-mortality1000;
-        int i = 1;
-        while (i <= 10){
-            System.out.println("Год " +i+", численность населения составляет "+population);
-            i=i+1;
+        int year = 1;
+        while (year <= 10){
+            System.out.println("Год " +year+", численность населения составляет "+population);
+            year=year+1;
             population = population +(population / 1000 * size1000);
         }
     }
-
 }
